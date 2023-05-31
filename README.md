@@ -29,7 +29,7 @@ The Lumen framework is open-sourced software licensed under the [MIT license](ht
 ## installation
 1. run composer install
 2. create database   DB_DATABASE=stripe_product
-3. set url  DB_DATABASE=stripe_product
+3. set url  http://localhost:8000
 4. install composer require --dev knuckleswtf/scribe
 5. run php artisan migrate:fresh --seed
 6. run php artisan scribe:generate  
