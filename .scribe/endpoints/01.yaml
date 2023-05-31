@@ -1,0 +1,281 @@
+name: Products
+description: |-
+
+  APIs for Products
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/products
+    metadata:
+      groupName: Products
+      groupDescription: |-
+
+        APIs for Products
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display all products.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: Unauthorized.
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer fbDa3cZaV1k46v85dEgePh6'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/product
+    metadata:
+      groupName: Products
+      groupDescription: |-
+
+        APIs for Products
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Create product'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: Standard
+        type: string
+        custom: []
+      price:
+        name: price
+        description: ''
+        required: true
+        example: 12.0
+        type: number
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: true
+        example: description
+        type: test
+        custom: []
+    cleanBodyParameters:
+      name: Standard
+      price: 12.0
+      description: description
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6Ed6acefPZkDv51h8ab34Vg'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/product/{id}'
+    metadata:
+      groupName: Products
+      groupDescription: |-
+
+        APIs for Products
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the Product.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: ''
+        required: true
+        example: quo
+        type: string
+        custom: []
+    cleanUrlParameters:
+      id: quo
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: Unauthorized.
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer aVkvbED5ef43g16c6PhZ8ad'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/product/{id}'
+    metadata:
+      groupName: Products
+      groupDescription: |-
+
+        APIs for Products
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the product.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: ''
+        required: true
+        example: corrupti
+        type: string
+        custom: []
+    cleanUrlParameters:
+      id: corrupti
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      id:
+        name: id
+        description: ''
+        required: true
+        example: voluptatem
+        type: string
+        custom: []
+      name:
+        name: name
+        description: ''
+        required: true
+        example: Standard
+        type: string
+        custom: []
+      price:
+        name: price
+        description: ''
+        required: true
+        example: 12.0
+        type: number
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: true
+        example: description
+        type: test
+        custom: []
+    cleanBodyParameters:
+      id: voluptatem
+      name: Standard
+      price: 12.0
+      description: description
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 3ek8dah1fD6EvZcg6bVP45a'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/product/{id}'
+    metadata:
+      groupName: Products
+      groupDescription: |-
+
+        APIs for Products
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete Product.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: ''
+        required: true
+        example: consequuntur
+        type: string
+        custom: []
+    cleanUrlParameters:
+      id: consequuntur
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1cZ63aeEkdfhP5b6VD4a8gv'
+    controller: null
+    method: null
+    route: null
+    custom: []

@@ -1,0 +1,294 @@
+openapi: 3.0.3
+info:
+  title: Lumen
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost:8000'
+paths:
+  /api/products:
+    get:
+      summary: 'Display all products.'
+      operationId: displayAllProducts
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {ACCESS_TOKEN}'
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Unauthorized.
+      tags:
+        - Products
+  /api/product:
+    post:
+      summary: 'Create product'
+      operationId: createProduct
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {ACCESS_TOKEN}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Products
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: Standard
+                price:
+                  type: number
+                  description: ''
+                  example: 12.0
+                description:
+                  type: test
+                  description: ''
+                  example: description
+              required:
+                - name
+                - price
+                - description
+  '/api/product/{id}':
+    get:
+      summary: 'Display the Product.'
+      operationId: displayTheProduct
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {ACCESS_TOKEN}'
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Unauthorized.
+      tags:
+        - Products
+    put:
+      summary: 'Update the product.'
+      operationId: updateTheProduct
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {ACCESS_TOKEN}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Products
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: ''
+                  example: voluptatem
+                name:
+                  type: string
+                  description: ''
+                  example: Standard
+                price:
+                  type: number
+                  description: ''
+                  example: 12.0
+                description:
+                  type: test
+                  description: ''
+                  example: description
+              required:
+                - id
+                - name
+                - price
+                - description
+    delete:
+      summary: 'Delete Product.'
+      operationId: deleteProduct
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {ACCESS_TOKEN}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Products
+    parameters:
+      -
+        in: path
+        name: id
+        description: ''
+        example: quo
+        required: true
+        schema:
+          type: string
+  /api/login:
+    post:
+      summary: 'Login user'
+      operationId: loginUser
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'User Authentication'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: ''
+                  example: admin@admin.com
+                password:
+                  type: string
+                  description: ''
+                  example: password
+              required:
+                - email
+                - password
+      security: []
+  /api/logout:
+    post:
+      summary: Logout
+      operationId: logout
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {ACCESS_TOKEN}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'User Authentication'
+  /api/user-profile:
+    post:
+      summary: 'Get current User.'
+      operationId: getCurrentUser
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {ACCESS_TOKEN}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'User Authentication'
+  /api/assign-role:
+    post:
+      summary: 'Assign role to user'
+      operationId: assignRoleToUser
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {ACCESS_TOKEN}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'User Authentication'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: integer
+                  description: ''
+                  example: 1
+                role_id:
+                  type: integer
+                  description: ''
+                  example: 2
+              required:
+                - user_id
+                - role_id
+  /api/user-subscribed-plan:
+    get:
+      summary: 'user subscribed plan'
+      operationId: userSubscribedPlan
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {ACCESS_TOKEN}'
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Unauthorized.
+      tags:
+        - 'User Authentication'
+tags:
+  -
+    name: Products
+    description: "\nAPIs for Products"
+  -
+    name: 'User Authentication'
+    description: "\nAPIs for user authentication"
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: ''
+security:
+  -
+    default: []
